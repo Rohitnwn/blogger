@@ -7,12 +7,12 @@
 </ul>
 
 <p>
-<%= f.label :title %><br />
+<%= f.label :title,"Add a title" %><br />
 <%= f.text_field :title %>
 </p>
 
 <p>
-<%= f.label :body %><br />
+<%= f.label :body, "Write here what you want" %><br />
 <%= f.text_area :body %>
 </p>
 
@@ -20,6 +20,12 @@
 <%= f.label :tag_list %><br />
 <%= f.text_field :tag_list %>
 </p>
+
+<p>
+<%= f.label :birthdate %><br />
+<%= f.date_select :birthdate  %>
+</p>
+
 
 <p>
 <% if @article.image.exists? %>

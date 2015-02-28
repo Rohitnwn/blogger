@@ -2,6 +2,7 @@ class ArticleController < ApplicationController
 
   def index
     @articles = Article.all
+    render nothing: => true
   end
 
   def show

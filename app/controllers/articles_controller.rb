@@ -28,7 +28,7 @@ include ArticleHelper
     @article = Article.find(params[:id])
     @article.destroy
 
-    flash.notice = "Article #{@article.title} is Deleted!!"
+    flash[:success] = "Article #{@article.title} is Deleted!!"
 
     redirect_to articles_path
   end
@@ -43,7 +43,7 @@ include ArticleHelper
 
     flash.notice = "Article #{@article.title} is Updated!!"
 
-    redirect_to article_path(@article)
+    redirect_to @article
   end
 
 end
